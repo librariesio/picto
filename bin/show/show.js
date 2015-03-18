@@ -13,15 +13,15 @@
 - pictograms on the console...
 */
 const pictureTube = require('picture-tube')
-const picto = require('../../data/index.js')
+const pictogram = require('pictogram')
 
 function show (opts) {
   var tube = pictureTube()
   tube.pipe(process.stdout)
   // TODO: barfs on all, only support single for now.
-  var list = opts.all ? picto.list() : [opts.name]
+  var list = opts.all ? pictogram.list() : [opts.name]
   list.forEach(function (name) {
-    picto(name).pipe(tube)
+    pictogram(name).pipe(tube)
   })
 }
 

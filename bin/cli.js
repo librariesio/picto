@@ -46,30 +46,17 @@ const css = require('./css/css.js')
 const list = require('./list/list.js')
 const show = require('./show/show.js')
 
-cli.command('gh').options({
+cli.command('ls').callback(list)
+
+cli.command('list').callback(list)
+
+cli.command('show').options({
   name: {
     required: true,
     position: 1,
     help: "the concept"
-  },
-  org: {
-    position: 2,
-    help: 'the github org name'
-  },
-  force: {
-    flag: true,
-    abbr: 'f',
-    help: 'to hell with the consequences'
   }
-}).callback(gh)
-
-cli.command('ghuser').options({
-  name: {
-    required: true,
-    position: 1,
-    help: "github username"
-  }
-}).callback(ghUser)
+}).callback(show)
 
 cli.command('grab').options({
   name: {
@@ -102,6 +89,31 @@ cli.command('regrab').options({
   },
 }).callback(regrab)
 
+cli.command('gh').options({
+  name: {
+    required: true,
+    position: 1,
+    help: "the concept"
+  },
+  org: {
+    position: 2,
+    help: 'the github org name'
+  },
+  force: {
+    flag: true,
+    abbr: 'f',
+    help: 'to hell with the consequences'
+  }
+}).callback(gh)
+
+cli.command('ghuser').options({
+  name: {
+    required: true,
+    position: 1,
+    help: "github username"
+  }
+}).callback(ghUser)
+
 cli.command('serve').options({
   port: {
     abbr: 'p',
@@ -116,18 +128,11 @@ cli.command('serve').options({
   console.log('Serving pictograms on :' + port)
 })
 
-cli.command('css').callback(css.print)
-
-cli.command('ls').callback(list)
-
-cli.command('list').callback(list)
-
-cli.command('show').options({
-  name: {
-    required: true,
+cli.command('css').options({
+  dir: {
     position: 1,
-    help: "the concept"
+    help: 'directory of pictograms'
   }
-}).callback(show)
+}).callback(css.print)
 
 cli.parse();

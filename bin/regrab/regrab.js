@@ -13,10 +13,10 @@
 - re-grab a grabbed pictogram
 */
 const grab = require('../grab/grab.js')
-const picto = require('../../data/index.js')
+const pictogram = require('pictogram')
 
 module.exports = function (opts) {
-  var meta = picto.meta(opts.name)
+  var meta = pictogram.meta(opts.name)
   grab({
     name: opts.name,
     url: meta.source.url,

@@ -12,10 +12,10 @@
 
 - Scrap github for org images
 */
-const data = require('../../data/index.js')
+const pictogram = require('pictogram')
 
 function list () {
-  data.list().forEach(function (item) {
+  pictogram.list().forEach(function (item) {
     console.log(item)
   })
 }

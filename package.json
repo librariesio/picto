@@ -1,23 +1,22 @@
 {
-  "name": "pictogram",
+  "name": "picto",
   "version": "0.10.2",
-  "description": "A simple service to map human concepts to pictures.",
+  "description": "A cli for pictogram wrangling",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/olizilla/pictogram"
+    "url": "https://github.com/librariesio/picto"
   },
   "author": {
     "name": "olizilla",
     "email": "oli@zilla.org.uk"
   },
-  "main": "data/index.js",
+  "main": "data/cli.js",
   "bin": {
-    "pictogram": "bin/cli.js",
     "picto": "bin/cli.js"
   },
   "scripts": {
-    "test": "node test/data.spec.js"
+    "test": "node test/bin/css/css.test.js"
   },
   "devDependencies": {
     "tape": "3.0.3"
@@ -29,6 +28,7 @@
     "ecstatic": "^0.6.1",
     "handlebars": "^3.0.0",
     "nomnom": "^1.8.1",
+    "pictogram": "^0.10.1",
     "picture-tube": "0.0.4",
     "request": "^2.53.0"
   }
