@@ -4,8 +4,8 @@ var cssesc = require('cssesc')
 var pictogram = require('pictogram')
 
 function generateCss (opts) {
-  var baseUrl = 'http://librariesio.github.io/pictogram/data/'
-  var data = prepareList(picto.list(opts.dir || process.cwd()), baseUrl)
+  var baseUrl = 'http://librariesio.github.io/pictogram/'
+  var data = prepareList(pictogram.list(opts.dir || process.cwd()), baseUrl)
   return toCss(data)
 }
 
