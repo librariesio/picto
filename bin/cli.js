@@ -123,7 +123,7 @@ cli.command('serve').options({
 }).callback(function(opts){
   var port = opts.port || 1337
   http.createServer(
-    ecstatic({ root: __dirname + '/../data' })
+    ecstatic({ root: __dirname + '/../node_modules/pictogram/' })
   ).listen(port);
   console.log('Serving pictograms on :' + port)
 })
