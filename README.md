@@ -3,6 +3,8 @@
 
 A CLI for wrangling [pictograms](https://github.com/librariesio/pictogram)
 
+http://libraries.io/npm/picto
+
  **Install via npm**
 ```sh
 npm install -g picto
