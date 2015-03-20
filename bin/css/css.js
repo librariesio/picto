@@ -1,20 +1,23 @@
-var fs = require('fs')
-var Handlebars = require('handlebars')
-var cssesc = require('cssesc')
-var pictogram = require('pictogram')
+const fs = require('fs')
+const Handlebars = require('handlebars')
+const cssesc = require('cssesc')
+const pictogram = require('pictogram')
+
+const BASE_URL = 'http://librariesio.github.io/pictogram/'
 
 function generateCss (opts) {
-  var baseUrl = 'http://librariesio.github.io/pictogram/'
+  var baseUrl = opts.baseUrl || BASE_URL
   var data = prepareList(pictogram.list(opts.dir || process.cwd()), baseUrl)
   return toCss(data)
 }
 
 function prepareList (list, baseUrl) {
   return list.map(function (item) {
+    var urlSafeItem = encodeURIComponent(item)
     return {
       name: item,
       cssIdentifier: cssesc(item, {'isIdentifier': true}),
-      url : baseUrl + item + '/' + item + '.png'
+      url : baseUrl + urlSafeItem + '/' + urlSafeItem + '.png'
     }
   })
 }
