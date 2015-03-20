@@ -1,5 +1,5 @@
 
-# Picto
+# [Picto](http://libraries.io/npm/picto)
 
 A CLI for wrangling [pictograms](https://github.com/librariesio/pictogram)
 
