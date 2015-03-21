@@ -43,6 +43,7 @@ const regrab = require('./regrab/regrab.js')
 const gh = require('./gh/gh.js')
 const ghUser = require('./gh/user.js')
 const css = require('./css/css.js')
+const html = require('./html/html.js')
 const list = require('./list/list.js')
 const show = require('./show/show.js')
 
@@ -134,5 +135,12 @@ cli.command('css').options({
     help: 'directory of pictograms'
   }
 }).callback(css.print)
+
+cli.command('html').options({
+  dir: {
+    position: 1,
+    help: 'directory of pictograms'
+  }
+}).callback(html.print)
 
 cli.parse();
