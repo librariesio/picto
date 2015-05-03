@@ -3,7 +3,7 @@ const Handlebars = require('handlebars')
 const cssesc = require('cssesc')
 const pictogram = require('pictogram')
 
-const BASE_URL = 'http://librariesio.github.io/pictogram/'
+const BASE_URL = 'https://librariesio.github.io/pictogram/'
 
 function generateCss (opts) {
   var baseUrl = opts.baseUrl || BASE_URL
