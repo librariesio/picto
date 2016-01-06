@@ -22,7 +22,7 @@
     "tape": "^4.3.0"
   },
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^1.5.1",
     "cheerio": "^0.18.0",
     "cssesc": "^0.1.0",
     "ecstatic": "^1.4.0",
