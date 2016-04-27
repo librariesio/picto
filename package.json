@@ -1,6 +1,6 @@
 {
   "name": "picto",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A cli for pictogram wrangling",
   "license": "ISC",
   "repository": {
