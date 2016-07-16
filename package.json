@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "async": "^1.5.1",
-    "cheerio": "^0.21.0",
+    "cheerio": "^0.20.0",
     "cssesc": "^0.1.0",
     "ecstatic": "^1.4.0",
     "handlebars": "^3.0.0",
