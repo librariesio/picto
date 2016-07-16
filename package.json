@@ -22,14 +22,14 @@
     "tape": "^4.3.0"
   },
   "dependencies": {
-    "async": "^1.5.1",
+    "async": "^2.0.0",
     "cheerio": "^0.21.0",
     "cssesc": "^0.1.0",
     "ecstatic": "^1.4.0",
-    "handlebars": "^3.0.0",
+    "handlebars": "^4.0.5",
     "nomnom": "^1.8.1",
     "pictogram": "^1.0.3",
-    "picture-tube": "0.0.4",
+    "picture-tube": "1.0.0",
     "request": "^2.53.0"
   }
 }
