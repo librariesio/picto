@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "async": "^2.0.0",
-    "cheerio": "^0.21.0",
     "cheerio": "^0.20.0",
     "cssesc": "^0.1.0",
     "ecstatic": "^1.4.0",
@@ -31,6 +30,6 @@
     "nomnom": "^1.8.1",
     "pictogram": "^1.0.3",
     "picture-tube": "1.0.0",
-    "request": "^2.53.0"
+    "request": "^2.74.0"
   }
 }
