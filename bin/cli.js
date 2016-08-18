@@ -12,7 +12,7 @@
 
                                   A libraries.io project.
 
- Create a new pictogram entry for a name or serve up what have.
+ Create a new pictogram entry for a name.
 
  ```sh
  # grab a image url
@@ -20,9 +20,6 @@
 
  # grab the org image from github
  picto gh <name> <org>
-
- # Serve up the data dir on port
- picto serve -p 8080
 
  # create a css file for all pictograms
  picto css
@@ -36,7 +33,6 @@
 
 */
 const http = require('http')
-const ecstatic = require('ecstatic')
 const cli = require('nomnom')
 const grab = require('./grab/grab.js')
 const regrab = require('./regrab/regrab.js')
@@ -114,20 +110,6 @@ cli.command('ghuser').options({
     help: "github username"
   }
 }).callback(ghUser)
-
-cli.command('serve').options({
-  port: {
-    abbr: 'p',
-    position: 1,
-    help: 'serve up the pictogram'
-  }
-}).callback(function(opts){
-  var port = opts.port || 1337
-  http.createServer(
-    ecstatic({ root: __dirname + '/../node_modules/pictogram/' })
-  ).listen(port);
-  console.log('Serving pictograms on :' + port)
-})
 
 cli.command('css').options({
   dir: {
